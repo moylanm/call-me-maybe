@@ -1,3 +1,4 @@
+import 'package:call_me_maybe/components/centered_placeholder.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatelessWidget {
@@ -9,9 +10,7 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(title)),
-      body: Center(
-        child: Text(title, style: Theme.of(context).textTheme.headlineMedium),
-      ),
+      body: const CenteredPlaceholder(padding: 50),
     );
   }
 }
