@@ -1,4 +1,4 @@
-import 'package:call_me_maybe/components/centered_placeholder.dart';
+import 'package:call_me_maybe/components/app_bar.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatelessWidget {
@@ -9,12 +9,16 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(title)),
+      appBar: appBar(title: title),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [_placeholderRow(), _placeholderRow()],
+        children: [_banner(), _placeholderRow(), _placeholderRow()],
       )
     );
+  }
+
+  Widget _banner() {
+    return const Text('Vash!', style: TextStyle(fontFamily: 'Raleway', fontSize: 100));
   }
 
   Widget _paddedPlaceholder() {
@@ -22,7 +26,7 @@ class MainScreen extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       child: SizedBox(
         width: 100, height: 100,
-        child: Image.asset('assets/vash.gif'),
+        child: Image.asset('assets/vash.png'),
       ),
     );
   }
