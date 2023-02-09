@@ -10,7 +10,27 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(title)),
-      body: const CenteredPlaceholder(padding: 50),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [_placeholderRow(), _placeholderRow()],
+      )
+    );
+  }
+
+  Widget _paddedPlaceholder() {
+    return Padding(
+      padding: const EdgeInsets.all(20),
+      child: SizedBox(
+        width: 100, height: 100,
+        child: Image.asset('assets/vash.png'),
+      ),
+    );
+  }
+
+  Widget _placeholderRow() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [_paddedPlaceholder(), _paddedPlaceholder()],
     );
   }
 }
