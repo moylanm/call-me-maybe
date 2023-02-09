@@ -5,13 +5,13 @@ import 'package:call_me_maybe/screens/resume.dart';
 import 'package:flutter/material.dart';
 
 class Main extends StatelessWidget {
-  static const tabs = [
+  static const _tabs = [
     Tab(icon: Icon(Icons.face)),
     Tab(icon: Icon(Icons.insert_drive_file)),
     Tab(icon: Icon(Icons.help_outline)),
   ];
 
-  final screens = [
+  final _screens = [
     BusinessCard(),
     Resume(),
     Predictor()
@@ -24,13 +24,16 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: tabs.length, 
+      length: _tabs.length, 
       child: Scaffold(
         appBar: appBar(
           title: title,
-          bottom: TabBar(tabs: tabs)  
+          bottom: const TabBar(
+            indicatorColor: Colors.white,
+            tabs: _tabs
+          ),
         ),
-        body: TabBarView(children: screens),
+        body: TabBarView(children: _screens),
       )
     );
   }
