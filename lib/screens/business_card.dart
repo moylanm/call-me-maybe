@@ -33,7 +33,7 @@ class BusinessCard extends StatelessWidget {
             const SizedBox(height: 10),
             Text('Myles Moylan', style: Styles.textDefault),
             const SizedBox(height: 5),
-            const Text('Software Developer'),
+            Text('Software Developer', style: Styles.textSmall),
             const SizedBox(height: 15),
             _phoneButton(),
             const SizedBox(height: 15),
