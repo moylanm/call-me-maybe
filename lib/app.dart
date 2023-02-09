@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'main_screen.dart';
+import 'screens/main.dart';
 
 class App extends StatelessWidget {
-  final String title;
+  static const String _title = 'Call Me Maybe';
 
-  const App({super.key, required this.title});
+  const App({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: title,
-      home: const MainScreen(title: 'Main Screen'),
+      title: _title,
+      home: Main(title: _title),
     );
   }
 }
