@@ -22,7 +22,7 @@ class MainScreen extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       child: SizedBox(
         width: 100, height: 100,
-        child: Image.asset('assets/vash.png'),
+        child: Image.asset('assets/vash.gif'),
       ),
     );
   }
