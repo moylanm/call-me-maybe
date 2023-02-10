@@ -60,7 +60,7 @@ class BusinessCard extends StatelessWidget {
           throw 'cannot launch';
         }
       },
-      child: const Text(_phone),
+      child: Text(_phone, style: Styles.textSmall),
     );
   }
 
@@ -73,7 +73,7 @@ class BusinessCard extends StatelessWidget {
           throw 'cannot launch';
         }
       },
-      child: const Text(_website),
+      child: Text(_website, style: Styles.textSmall),
     );
   }
 
@@ -86,7 +86,7 @@ class BusinessCard extends StatelessWidget {
           throw 'cannot launch';
         }
       },
-      child: const Text(_email),
+      child: Text(_email, style: Styles.textSmall),
     );
   }
 }
