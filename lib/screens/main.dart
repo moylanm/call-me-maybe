@@ -1,4 +1,3 @@
-import 'package:call_me_maybe/components/app_bar.dart';
 import 'package:call_me_maybe/config/styles.dart';
 import 'package:call_me_maybe/screens/business_card.dart';
 import 'package:call_me_maybe/screens/predictor.dart';
