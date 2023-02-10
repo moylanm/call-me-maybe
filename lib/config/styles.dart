@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class Styles {
   static const _textSizeDefault = 20.0;
   static const _textSizeSmall = 14.0;
+  static const _textSizeLarge = 30.0;
   static const _textSizeNavBar = 25.0;
   static const _textSizeButton = 30.0;
   static const String _fontNameDefault = 'Raleway';
@@ -30,6 +31,13 @@ class Styles {
     fontSize: _textSizeSmall,
     fontWeight: FontWeight.bold,
     color: _textColorDefault,
+  );
+
+  static final textLarge = TextStyle(
+    fontFamily: _fontNameDefault,
+    fontSize: _textSizeLarge,
+    fontWeight: FontWeight.bold,
+    color: _textColorDefault
   );
 
   static final buttonText = TextStyle(
