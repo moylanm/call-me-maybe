@@ -1,4 +1,5 @@
 import 'package:call_me_maybe/components/app_bar.dart';
+import 'package:call_me_maybe/config/styles.dart';
 import 'package:call_me_maybe/screens/business_card.dart';
 import 'package:call_me_maybe/screens/predictor.dart';
 import 'package:call_me_maybe/screens/resume.dart';
@@ -26,8 +27,9 @@ class Main extends StatelessWidget {
     return DefaultTabController(
       length: _tabs.length, 
       child: Scaffold(
-        appBar: appBar(
-          title: title,
+        appBar: AppBar(
+          backgroundColor: Styles.themeColor,
+          title: Text(title, style: Styles.navBarTitle),
           bottom: const TabBar(
             indicatorColor: Colors.white,
             tabs: _tabs
