@@ -5,7 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 class BusinessCard extends StatelessWidget {
   static const _phone = '555 555 5555';
   static const _email = 'moylanm@oregonstate.edu';
-  static const _github = 'github.com/moylanm';
+  static const _website = 'github.com/moylanm';
 
   final _phoneUri = Uri(
     scheme: 'sms',
@@ -15,9 +15,9 @@ class BusinessCard extends StatelessWidget {
     scheme: 'mailto',
     path: _email,
   );
-  final _githubUri = Uri(
+  final _websiteUri = Uri(
     scheme: 'https',
-    path: _github,
+    path: _website,
   );
 
   BusinessCard({super.key});
@@ -26,7 +26,7 @@ class BusinessCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Padding(
-        padding: const EdgeInsets.all(35.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
             Image.asset('assets/images/selfie.jpg'),
@@ -67,13 +67,13 @@ class BusinessCard extends StatelessWidget {
   Widget _githubButton() {
     return GestureDetector(
       onTap: () async {
-        if (await canLaunchUrl(_githubUri)) {
-          await launchUrl(_githubUri); 
+        if (await canLaunchUrl(_websiteUri)) {
+          await launchUrl(_websiteUri); 
         } else {
           throw 'cannot launch';
         }
       },
-      child: const Text(_github),
+      child: const Text(_website),
     );
   }
 
